@@ -1,0 +1,12 @@
+<section class="photoinfo" >
+    <div class="infowrap cf" ng-model="artist">
+        <div class="info">
+            <h1> Title: {{photoList[whichItem].title}}</h1>
+            <img ng-src="{{photoList[whichItem].thumbnailUrl}}" alt="{{}}">
+            <div class="infodetail">Url: {{photoList[whichItem].url}}</div>
+            <div class="infodetail">Item id: {{photoList[whichItem].albumId}}</div>
+            <div class="infodetail">Album id: {{photoList[whichItem].id}}</div>
+        </div>
+    </div>
+    <a href="#/list">back to search</a>
+</section>

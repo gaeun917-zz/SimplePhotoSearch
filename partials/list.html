@@ -1,0 +1,17 @@
+<section class="photosearch">
+    <div class="search">
+        <h1>Photo Search </h1>
+        <label>search: </label>
+        <input ng-model="query" placeholder="Search for photoList" autofocus>
+    </div>
+    <ul class="photolist">
+        <li ng-show="query" class="infowrap" ng-repeat="item in photoList | filter: query | limitTo:10 ">
+            <a href="#/details/{{item.id}}">
+                <img ng-src="{{item.thumbnailUrl}}" alt="">
+                <div>
+                    <h2>{{item.title}}</h2>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
